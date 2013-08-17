@@ -11,8 +11,7 @@ c(Module) when is_atom(Module) ->
         {ok, Source, Options} ->
             %% Module will be loaded dynamicly, except for those are in use.
             case lists:member({d, 'TEST'}, Options) of
-                true ->
-                    io:format("debug ON~n");
+                true -> io:format("debug ON~n");
                 _False -> io:format("debug OFF~n")
             end,
             c:c(Source, Options);
