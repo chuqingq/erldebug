@@ -7,7 +7,6 @@
 %% API
 
 c(Module) when is_atom(Module) ->
-    
     case get_module_info(Module) of
         {ok, Source, Options} ->
             
